@@ -15,10 +15,11 @@ app = FastAPI(
 # Since these are different origins, CORS permission is required.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5176",
-        "http://127.0.0.1:5176",
-    ],
+allow_origins=[
+    "http://localhost:5176",
+    "http://127.0.0.1:5176",
+    "https://askmynotes-frontend-2xlh.onrender.com",
+],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
